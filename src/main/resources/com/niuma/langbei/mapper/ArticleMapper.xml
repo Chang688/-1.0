@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niuma.langbei.mapper.ArticleMapper">
+
+    <resultMap id="BaseResultMap" type="com.niuma.langbei.model.domain.Article">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="CHAR"/>
+            <result property="time" column="time" jdbcType="VARCHAR"/>
+            <result property="context" column="context" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,time,
+        context,createTime,updateTime,
+        isDelete,title,status
+    </sql>
+</mapper>

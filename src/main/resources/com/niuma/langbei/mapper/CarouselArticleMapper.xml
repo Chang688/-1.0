@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niuma.langbei.mapper.CarouselArticleMapper">
+
+    <resultMap id="BaseResultMap" type="com.niuma.langbei.model.domain.CarouselArticle">
+            <id property="carouselid" column="carouselId" jdbcType="INTEGER"/>
+            <result property="articleid" column="articleId" jdbcType="INTEGER"/>
+            <result property="carouserurl" column="carouserUrl" jdbcType="VARCHAR"/>
+            <result property="createtime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updatetime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isdelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        carouselId,articleId,carouserUrl,
+        createTime,updateTime,isDelete
+    </sql>
+</mapper>
